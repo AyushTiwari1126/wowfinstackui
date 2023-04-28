@@ -5,6 +5,7 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  color: white;
 }
 
 .description {
@@ -106,7 +107,130 @@
 
 .logo {
   position: relative;
+  margin: 20px 50px;
+  filter: grayscale(100%)
 }
+
+/* drop-shadow(0 0 0.3rem #d9303070); */
+
+.ayush {
+  position: relative;
+  margin: 20px 50px;
+  filter: grayscale(100%)
+}
+
+.aside {
+  min-width: 30%;
+  min-height: 100vh;
+  display: inline-block;
+  background-color: #006087;
+  text-align: justify;
+  font-size: larger;
+  color: white;
+}
+
+.aside ul {
+  display: block;
+  margin: 20px;
+  padding: 20px;
+  color: white;
+
+}
+
+.aside ul li {
+  margin: 15px 10px;
+  color: white;
+}
+
+.systemsetup {
+  list-style-image: url('/gear.svg');
+}
+
+.usermgmt {
+  list-style-image: url('/person.svg');
+}
+
+.cardsmgmt {
+  list-style-image: url('/wallet2.svg');
+}
+
+.applforms {
+  list-style-image: url('/pencil-square.svg');
+}
+
+.cardsmgmt ul {
+  margin: 5px;
+  padding: 5px 20px;
+  font-size: medium;
+  list-style: square;
+  color: white;
+}
+
+.cardsmgmt{
+  display: block;
+}
+
+.navbar {
+  box-sizing: border-box;
+  display: block;
+  /* box-shadow: 1px 1px; */
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 25px 30px;
+}
+
+.navbar ul li {
+  margin: 0px 15px;
+  padding: 0px 15px;
+}
+
+.screen {
+  display: inline-flex;
+}
+
+.asidebar {
+  display: flex;
+  width: 60%;
+}
+.details{
+  display: block;
+}
+
+
+.details ul {
+  display: flex;
+  list-style: none;
+}
+
+.display ul li {
+  margin: 0px 15px;
+  padding: 0px 15px;
+}
+
+.header{
+  margin: auto;
+  width: 1280px;
+}
+.header ul{
+  background-color: black;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header ul li{
+  border-right: 1px solid gray;
+  color: white;
+  font-size: 14px;
+  padding: 1rem 2rem;
+}
+
+/* list-style-image: url('/gear.svg'); */
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -178,11 +302,9 @@
     border-radius: 0;
     border: none;
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
-    background: linear-gradient(
-      to bottom,
-      rgba(var(--background-start-rgb), 1),
-      rgba(var(--callout-rgb), 0.5)
-    );
+    background: linear-gradient(to bottom,
+        rgba(var(--background-start-rgb), 1),
+        rgba(var(--callout-rgb), 0.5));
     background-clip: padding-box;
     backdrop-filter: blur(24px);
   }
@@ -193,11 +315,9 @@
     inset: auto 0 0;
     padding: 2rem;
     height: 200px;
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--background-end-rgb)) 40%
-    );
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgb(var(--background-end-rgb)) 40%);
     z-index: 1;
   }
 }
@@ -213,16 +333,13 @@
   .vercelLogo {
     filter: invert(1);
   }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
 }
 
 @keyframes rotate {
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0deg);
   }
