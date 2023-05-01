@@ -78,7 +78,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 4rem 0;
+  padding: 4rem 0px;
 }
 
 .center::before {
@@ -106,21 +106,16 @@
 }
 
 .logo {
-  position: relative;
-  margin: 20px 50px;
-  filter: grayscale(100%)
+  display: block;
+  filter: grayscale(100%);
+  margin: 5px auto;
+  width: 40%;
 }
 
 /* drop-shadow(0 0 0.3rem #d9303070); */
 
-.ayush {
-  position: relative;
-  margin: 20px 50px;
-  filter: grayscale(100%)
-}
-
 .aside {
-  min-width: 30%;
+  min-width: 15vw;
   min-height: 100vh;
   display: inline-block;
   background-color: #006087;
@@ -134,7 +129,7 @@
   margin: 20px;
   padding: 20px;
   color: white;
-
+  text-align: center;
 }
 
 .aside ul li {
@@ -166,25 +161,71 @@
   color: white;
 }
 
-.cardsmgmt{
+.cardsmgmt {
   display: block;
 }
 
-.navbar {
-  box-sizing: border-box;
+.dropdowntoggle {
+  font-size: 15px;
+  background-color: #006087;
+  border: none;
+  margin: 0px 5px;
+}
+
+.dropdown{
+  margin-top: 30px;
+
+}
+
+.dropdown ul {
+  display: none;
+  background-color: green;
+  border: none;
+}
+.dropdown{
+min-width: 280px;
+
+}
+
+.dropdowntoggle:hover {
+  background-color: #006087;
+  color: white;
+}
+
+.ddtimg11 {
+  color: transparent;
+  filter: invert(1);
+  margin: 0px 10px;
+}
+
+.ddtimg12 {
+  color: transparent;
+  filter: invert(1);
+  margin: 0px 10px;
+}
+
+.dropdown ul li {
+  margin: 2px auto;
+}
+
+.dropdown ul a {
   display: block;
-  /* box-shadow: 1px 1px; */
 }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 25px 30px;
+.dropdown ul a:hover {
+
+  border: none;
+  color: white;
 }
 
-.navbar ul li {
-  margin: 0px 15px;
-  padding: 0px 15px;
+.dropdownitem {
+  text-decoration: none;
+  color: white;
+  background-color: #006087;
+}
+
+.dropdownitem:hover {
+  color: white;
 }
 
 .screen {
@@ -195,39 +236,14 @@
   display: flex;
   width: 60%;
 }
-.details{
+
+.navbar {
+  box-sizing: border-box;
   display: block;
+  /* box-shadow: 1px 1px; */
 }
 
 
-.details ul {
-  display: flex;
-  list-style: none;
-}
-
-.display ul li {
-  margin: 0px 15px;
-  padding: 0px 15px;
-}
-
-.header{
-  margin: auto;
-  width: 1280px;
-}
-.header ul{
-  background-color: black;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header ul li{
-  border-right: 1px solid gray;
-  color: white;
-  font-size: 14px;
-  padding: 1rem 2rem;
-}
 
 /* list-style-image: url('/gear.svg'); */
 

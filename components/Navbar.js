@@ -1,4 +1,4 @@
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Navbar.module.css'
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -7,7 +7,7 @@ import Image from 'next/image'
 const Navbar = () => {
     return (
         <>
-            <div className={styles.sidebody}>
+            
                 <div className={styles.navbar}>
                     <ul>
                         <li>
@@ -35,7 +35,6 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-            </div >
         </>
 
     )
