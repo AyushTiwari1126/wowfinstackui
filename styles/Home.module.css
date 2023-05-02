@@ -129,7 +129,7 @@
   margin: 20px;
   padding: 20px;
   color: white;
-  text-align: center;
+  text-align: justify;
 }
 
 .aside ul li {
@@ -170,26 +170,39 @@
   background-color: #006087;
   border: none;
   margin: 0px 5px;
+
 }
 
-.dropdown{
+.dropdown {
   margin-top: 30px;
 
 }
 
 .dropdown ul {
   display: none;
-  background-color: green;
   border: none;
-}
-.dropdown{
-min-width: 280px;
-
+  min-width: 10vw;
+  /*-------- open dropdown bg-color --------*/
+  background-color: #035070;
+  padding: 0px 68.5px;
+  border-radius: 0px;
 }
 
 .dropdowntoggle:hover {
-  background-color: #006087;
   color: white;
+  padding: 6px 36.17px;
+  background-color: #035070;
+  box-shadow: 0px 0px 0px 2px #035070;
+}
+
+
+.dropdowntoggle {
+  /*-------- opendropdown bg-olor --------*/
+  /* background-color: #035070; */
+  border-radius: 0px;
+  padding: 10px 36.17px;
+  width: 15vw;
+  
 }
 
 .ddtimg11 {
@@ -205,7 +218,8 @@ min-width: 280px;
 }
 
 .dropdown ul li {
-  margin: 2px auto;
+  margin: 2px 0px;
+  padding: 3px 0px;
 }
 
 .dropdown ul a {
@@ -227,6 +241,7 @@ min-width: 280px;
 .dropdownitem:hover {
   color: white;
 }
+
 
 .screen {
   display: inline-flex;

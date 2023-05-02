@@ -1,24 +1,31 @@
 import React from 'react'
 import styles from '@/styles/Home.module.css'
+import { useState } from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 
+function Asidebar() {
 
-// import React, { useState } from "react";
+    let [toggled, setToggled] = React.useState(true);
 
-// function HeaderIcon({ inactiveIcon, activeIcon }) {
-//  const [isActive, setIsActive] = useState(false);
-
-//  return (
-//    <div onClick={() => setIsActive(!isActive)}>
-//      {isActive ? chevron-down.svg : chevron-up.svg}
-//    </div>
-//  );
-// }
+    let toggleImage = () => {
+        let val = !toggled;
+        (val === !toggled ? setToggled(!toggled) : setToggled(toggled))
+    };
 
 
 
-const Asidebar = () => {
+    // let [toggled, setToggled] = React.useState(true);
+
+    // let toggleImage = () => setToggled(!toggled);
+    // const [firstImage, setImage] = useState(<Image className={styles.ddtimg12} src="/chevron-down.svg" width={20} height={20} />);
+    // const changeImage = () => {
+
+    //     let val = firstImage;
+
+    //     (val === <Image className={styles.ddtimg12} src="/chevron-down.svg" width={20} height={20} />) ? setImage(<Image className={styles.ddtimg12} src="/chevron-up.svg" width={20} height={20} />) : setImage(<Image className={styles.ddtimg12} src="/chevron-down.svg" width={20} height={20} />);
+    // }
+
     return (
         <>
             <div className={styles.aside}>
@@ -29,13 +36,11 @@ const Asidebar = () => {
                     width={100}
                     height={50} />
 
+
                 <div className={styles.dropdown}>
-                    <a className={styles.dropdowntoggle} class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <Image className={styles.ddtimg11}
-                            src="/wallet2.svg" width={20} height={20} />
-                        Cards Management
-                        <Image className={styles.ddtimg12}
-                            src="/chevron-down.svg" width={20} height={20} />
+                    <a className={styles.dropdowntoggle} onClick={toggleImage} class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <Image className={styles.ddtimg11} src="/wallet2.svg" width={20} height={20} />Cards Management
+                    {toggled ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12}/> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12}/>}
                     </a>
                     <ul class="dropdown-menu">
                         <li><a className={styles.dropdownitems} href="#">Card Product Setup</a></li>
@@ -45,8 +50,6 @@ const Asidebar = () => {
                         <li><a className={styles.dropdownitems} href="#">Customer Group Fee</a></li>
                     </ul>
                 </div>
-
-
 
 
                 {/* <ul>
@@ -76,16 +79,10 @@ const Asidebar = () => {
                     </li>
 
                 </ul> */}
+
             </div>
-
-            {/* <script>
-                $(".dropdowntoggle").click(function () {
-                    $("dropdowntoggle").toggleClass("/chevron-down.svg /chevron-up.svg")
-                });
-            </script> */}
-
         </>
-    )
+    );
 }
 
 export default Asidebar
