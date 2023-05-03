@@ -193,6 +193,7 @@
   padding: 6px 36.17px;
   background-color: #035070;
   box-shadow: 0px 0px 0px 2px #035070;
+  opacity: 1;
 }
 
 
@@ -202,7 +203,12 @@
   border-radius: 0px;
   padding: 10px 36.17px;
   width: 15vw;
+  opacity: 0.8;
   
+}
+
+.dropdowntoggle:active{
+  opacity: 1;
 }
 
 .ddtimg11 {
@@ -220,6 +226,12 @@
 .dropdown ul li {
   margin: 2px 0px;
   padding: 3px 0px;
+  opacity: 0.8;
+}
+
+.dropdown ul li:hover{
+  cursor: pointer;
+  opacity: 1;
 }
 
 .dropdown ul a {

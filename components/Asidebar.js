@@ -1,17 +1,19 @@
-import React from 'react'
+
 import styles from '@/styles/Home.module.css'
-import { useState } from 'react';
+import OutsideClickHandler from 'react-outside-click-handler';
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 function Asidebar() {
 
     let [toggled, setToggled] = React.useState(true);
-
     let toggleImage = () => {
         let val = !toggled;
         (val === !toggled ? setToggled(!toggled) : setToggled(toggled))
     };
+
+    const [hidden, setHidden] = useState(false)
 
 
 
@@ -38,10 +40,19 @@ function Asidebar() {
 
 
                 <div className={styles.dropdown}>
-                    <a className={styles.dropdowntoggle} onClick={toggleImage} class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <Image className={styles.ddtimg11} src="/wallet2.svg" width={20} height={20} />Cards Management
-                    {toggled ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12}/> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12}/>}
-                    </a>
+                    <OutsideClickHandler onOutsideClick={() => { setHidden(false) }}>
+
+                        <a className={styles.dropdowntoggle} onClick={toggleImage} class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <Image onClick={() => setHidden(!hidden)} className={styles.ddtimg11} src="/wallet2.svg" width={20} height={20} />Cards Management
+                            {toggled ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12} /> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12} />}
+                        </a>
+                    </OutsideClickHandler>
+                    {hidden &&
+                        (<div>
+                            <h5>Dropdown</h5>
+                        </div>
+
+                        )}
                     <ul class="dropdown-menu">
                         <li><a className={styles.dropdownitems} href="#">Card Product Setup</a></li>
                         <li><a className={styles.dropdownitems} href="#">Card Product Rules</a></li>
@@ -49,6 +60,8 @@ function Asidebar() {
                         <li><a className={styles.dropdownitems} href="#">Credit Limit Profile</a></li>
                         <li><a className={styles.dropdownitems} href="#">Customer Group Fee</a></li>
                     </ul>
+
+
                 </div>
 
 

@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Asidebar from '@/components/Asidebar'
 import Navbar from '@/components/Navbar'
+import Test from '@/components/Test';
 import '@/styles/globals.css'
 import { useEffect } from 'react';
 import ApplicationForms from '@/components/ApplicationForms';
@@ -16,7 +17,8 @@ export default function App({ Component, pageProps }) {
       </div>
       <div className='formbody'>
         <Navbar />
-        <ApplicationForms/>
+        {/* <ApplicationForms/> */}
+        <Test/>
       </div>
     </div>
 
