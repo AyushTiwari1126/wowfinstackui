@@ -192,7 +192,7 @@
   color: white;
   padding: 6px 36.17px;
   background-color: #035070;
-  box-shadow: 0px 0px 0px 2px #035070;
+  /* box-shadow: 0px 0px 0px 2px #035070; */
   opacity: 1;
 }
 
@@ -244,10 +244,9 @@
   color: white;
 }
 
-.dropdownitem {
-  text-decoration: none;
-  color: white;
+.dropdownitems {
   background-color: #006087;
+  padding: 3px 0px;
 }
 
 .dropdownitem:hover {
@@ -270,8 +269,96 @@
   /* box-shadow: 1px 1px; */
 }
 
+/* ----------------------------------------------------------------------- */
+.container{
+  margin-top: 40px;
+}
 
+.accordianheader{
+  opacity: 0.7;
+  padding: 5px 0px 5px 0px;  
+}
+/* .accordianTwoheader, .accordianThreeheader, .accordianFourheader */
+.accordianitems{
+  list-style: none;
+  font-size: 16px;
+  background-color: #035070;
+}
 
+.accordianitems li{
+  padding: 10px 0px;
+
+}
+
+.accordianheader:active{
+  opacity: 1;
+  font-weight: 700;
+}
+
+.accordianOne, .accordianTwo, .accordianThree:hover, .accordianFour:hover{
+  background-color: #006087;
+}
+
+.accordianOne:hover, .accordianTwo:hover, .accordianThree:hover, .accordianFour:hover{
+  background-color: #035070;
+}
+
+.accordian:hover{
+  background-color: #035070;
+}
+
+.accordian:active{
+  background-color: #035070;
+}
+
+.accordianheader:hover {
+  color: white;
+  background-color: #035070;
+  opacity: 1;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.accordianitems li {
+  margin: 2px 0px;
+  padding: 3px 0px;
+  opacity: 0.7;
+  background-color: #035070;
+}
+
+.accordianitems li:hover {
+  margin: 2px 0px;
+  padding: 3px 0px;
+  opacity: 1;
+  color: white;
+}
+
+.accordianBody li{
+  background-color: #035070;
+}
+
+.dropdownitems{
+  padding-left: 40px;
+  background-color: #035070;
+  /* box-shadow: 0px 0px 0px 2px #035070; */
+}
+
+.dropdownitems:hover{
+  /* background-color: #035070; */
+  color: white;
+  background-color: #035070;
+}
+
+.dropdownitem:hover {
+  color: white;
+}
+
+.accordian-button:active{
+  font-weight: bold;
+  opacity: 1;
+}
+
+/* ----------------------------------------------------------------------- */
 /* list-style-image: url('/gear.svg'); */
 
 /* Enable hover only on non-touch devices */
