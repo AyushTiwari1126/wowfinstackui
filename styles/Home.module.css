@@ -196,7 +196,6 @@
   opacity: 1;
 }
 
-
 .dropdowntoggle {
   /*-------- opendropdown bg-olor --------*/
   /* background-color: #035070; */
@@ -204,10 +203,10 @@
   padding: 10px 36.17px;
   width: 15vw;
   opacity: 0.8;
-  
+
 }
 
-.dropdowntoggle:active{
+.dropdowntoggle:active {
   opacity: 1;
 }
 
@@ -229,7 +228,7 @@
   opacity: 0.8;
 }
 
-.dropdown ul li:hover{
+.dropdown ul li:hover {
   cursor: pointer;
   opacity: 1;
 }
@@ -270,44 +269,51 @@
 }
 
 /* ----------------------------------------------------------------------- */
-.container{
+.container {
   margin-top: 40px;
 }
 
-.accordianheader{
+.accordianheader {
   opacity: 0.7;
-  padding: 5px 0px 5px 0px;  
+  padding: 5px 0px 5px 0px;
 }
+
 /* .accordianTwoheader, .accordianThreeheader, .accordianFourheader */
-.accordianitems{
+.accordianitems {
   list-style: none;
   font-size: 16px;
   background-color: #035070;
 }
 
-.accordianitems li{
+.accordianitems li {
   padding: 10px 0px;
 
 }
 
-.accordianheader:active{
+/* .accordianheader:active{
   opacity: 1;
   font-weight: 700;
-}
+} */
 
-.accordianOne, .accordianTwo, .accordianThree:hover, .accordianFour:hover{
+.accordianOne,
+.accordianTwo,
+.accordianThree:hover,
+.accordianFour:hover {
   background-color: #006087;
 }
 
-.accordianOne:hover, .accordianTwo:hover, .accordianThree:hover, .accordianFour:hover{
+.accordianOne:hover,
+.accordianTwo:hover,
+.accordianThree:hover,
+.accordianFour:hover {
   background-color: #035070;
 }
 
-.accordian:hover{
+.accordian:hover {
   background-color: #035070;
 }
 
-.accordian:active{
+.accordian:active {
   background-color: #035070;
 }
 
@@ -330,32 +336,85 @@
   margin: 2px 0px;
   padding: 3px 0px;
   opacity: 1;
-  color: white;
 }
 
-.accordianBody li{
+.accordianBody li {
   background-color: #035070;
 }
 
-.dropdownitems{
+.dropdownitems {
   padding-left: 40px;
   background-color: #035070;
+  opacity: 0.7;
   /* box-shadow: 0px 0px 0px 2px #035070; */
 }
 
-.dropdownitems:hover{
+.dropdownitems:hover {
   /* background-color: #035070; */
   color: white;
   background-color: #035070;
+  opacity: 1;
 }
 
 .dropdownitem:hover {
   color: white;
 }
 
-.accordian-button:active{
+.accordianOne .accordianheader {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.accordianOne .accordianheaderactive {
+  opacity:1;
+  /* text-decoration: underline; */
   font-weight: bold;
+}
+
+.accordianTwo .accordianheader {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.accordianTwo .accordianheaderactive {
+  opacity:1;
+  /* text-decoration: underline; */
+  font-weight: bold;
+}
+
+.accordianThree.accordianheader {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.accordianThree .accordianheaderactive {
+  opacity:1;
+  /* text-decoration: underline; */
+  font-weight: bold;
+}
+
+.accordianFour .accordianheader {
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.accordianFour .accordianheaderactive {
+  opacity:1;
+  /* text-decoration: underline; */
+  font-weight: bolder;
+}
+
+.dropdownitems{
   opacity: 1;
+  color: rgb(246, 238, 238);
+}
+
+.accordianitems .dropdownitemsactive{
+  padding-left: 40px;
+  opacity: 1;
+  color: white;
+  /* text-decoration: underline; */
+  font-weight: bold;
 }
 
 /* ----------------------------------------------------------------------- */

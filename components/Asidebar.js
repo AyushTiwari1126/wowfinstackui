@@ -1,17 +1,111 @@
 import styles from '@/styles/Home.module.css'
-import OutsideClickHandler from 'react-outside-click-handler';
+import classNames from 'classnames'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 function Asidebar() {
 
-    let [toggled, setToggled] = React.useState(true);
-    let toggleImage = () => {
-        let val = !toggled;
-        (val === !toggled ? setToggled(!toggled) : setToggled(toggled))
+//--------------------------------------------------------------------------------
+//----------------------- toggle for accordianheader------------------------------
+
+    let [toggled1, setToggled1] = React.useState(true);
+    let toggleImage1 = () => {
+        let val1 = !toggled1;
+        (val1 === !toggled1 ? setToggled1(!toggled1) : setToggled1(toggled1))
     };
 
+    let [toggled2, setToggled2] = React.useState(true);
+    let toggleImage2 = () => {
+        let val2 = !toggled2;
+        (val2 === !toggled2 ? setToggled2(!toggled2) : setToggled2(toggled2))
+    };
+
+    let [toggled3, setToggled3] = React.useState(true);
+    let toggleImage3 = () => {
+        let val3 = !toggled3;
+        (val3 === !toggled3 ? setToggled3(!toggled3) : setToggled3(toggled3))
+    };
+
+    let [toggled4, setToggled4] = React.useState(true);
+    let toggleImage4 = () => {
+        let val4 = !toggled4;
+        (val4 === !toggled4 ? setToggled4(!toggled4) : setToggled4(toggled4))
+    };
+
+//----------------------------------------------------------------
+//--------------------- dropdownitems-----------------------------
+
+    const [isOpen1, setIsOpen1] = useState(false);
+    const onclickHeader1 = () => {
+        setIsOpen1(!isOpen1)
+    }
+
+    const [isOpen2, setIsOpen2] = useState(false);
+    const onclickHeader2 = () => {
+        setIsOpen2(!isOpen2)
+    }
+
+    const [isOpen3, setIsOpen3] = useState(false);
+    const onclickHeader3 = () => {
+        setIsOpen3(!isOpen3)
+    }
+
+    const [isOpen4, setIsOpen4] = useState(false);
+    const onclickHeader4 = () => {
+        setIsOpen4(!isOpen4)
+    }
+
+//----------------------------------------------------------------
+//----------------------dropdown for System Setup-----------------
+
+    const [isOpen5, setIsOpen5] = useState(false);
+    const onclickHeader5 = () => {
+        setIsOpen5(!isOpen5)
+    }
+
+    const [isOpen6, setIsOpen6] = useState(false);
+    const onclickHeader6 = () => {
+        setIsOpen6(!isOpen6)
+    }
+
+//-------------------------------------------------------------------
+//----------------------dropdown for User management-----------------
+
+    const [isOpen7, setIsOpen7] = useState(false);
+    const onclickHeader7 = () => {
+        setIsOpen7(!isOpen7)
+    }
+
+    const [isOpen8, setIsOpen8] = useState(false);
+    const onclickHeader8 = () => {
+        setIsOpen8(!isOpen8)
+    }
+
+//--------------------------------------------------------------------
+//----------------------dropdown for Cards Management ----------------
+
+    const [isOpen9, setIsOpen9] = useState(false);
+    const onclickHeader9 = () => {
+        setIsOpen9(!isOpen9)
+    }
+
+    const [isOpen10, setIsOpen10] = useState(false);
+    const onclickHeader10 = () => {
+        setIsOpen10(!isOpen10)
+    }
+
+    const [isOpen11, setIsOpen11] = useState(false);
+    const onclickHeader11 = () => {
+        setIsOpen11(!isOpen11)
+    }
+
+    const [isOpen12, setIsOpen12] = useState(false);
+    const onclickHeader12 = () => {
+        setIsOpen12(!isOpen12)
+    }
+
+//---------------------------------------------------------------------
     return (
         <>
             <div className={styles.aside}>
@@ -24,69 +118,72 @@ function Asidebar() {
 
                 <div className={styles.container}>
                     <div className={styles.accordianOne} class="accordion-item">
-                        <h2 className={styles.accordianheader}>
-                            <button onClick={toggleImage} class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h2 onClick={onclickHeader1} className={`${isOpen1 === true ? styles.accordianheaderactive : styles.accordianheader}`}>
+
+                            {/* className={`${isOpen1 ? 'accordianheaderactive' : 'accordianheader'}`} */}
+                            {/* <h2 onClick={onclickHeader1} className={classNames('accordianheader',{'accordianheader-active':isOpen1, 'fontweight-active':isOpen1})}> */}
+
+
+                            <button onClick={toggleImage1} class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <Image className={styles.ddtimg11} src="/gear.svg" width={20} height={20} />
                                 System Setup
-                                {toggled ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12} /> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12} />}
+                                {toggled1 ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12} /> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12} />}
                             </button>
                         </h2>
                         <div className={styles.accordianBody} id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div className={styles.accordianitems} class="accordion-body">
-                                <li><a className={styles.dropdownitems} href="#">Card Product Setup</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Card Product Rules</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Credit Scoring</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Credit Limit Profile</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Customer Group Fee</a></li>
+                                <li><a onClick={onclickHeader5} className={`${isOpen5 === true ? styles.dropdownitemsactive : styles.dropdownitems}`} href="#">Card Product Setup</a></li>
+                                <li><a onClick={onclickHeader6} className={`${isOpen6 === true ? styles.dropdownitemsactive : styles.dropdownitems}`} href="#">Card Product Rules</a></li>
+
                             </div>
                         </div>
                     </div>
 
+
                     <div className={styles.accordianTwo} class="accordion-item">
-                        <h2 className={styles.accordianheader}>
-                            <button onClick={toggleImage} class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h2 onClick={onclickHeader2} className={`${isOpen2 === true ? styles.accordianheaderactive : styles.accordianheader}`}>
+                            <button onClick={toggleImage2} class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 <Image className={styles.ddtimg11} src="/person.svg" width={20} height={20} />
                                 User Management
-                                {toggled ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12} /> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12} />}
+                                {toggled2 ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12} /> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12} />}
                             </button>
                         </h2>
                         <div className={styles.accordianBody} id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className={styles.accordianitems} class="accordion-body">
-                                <li><a className={styles.dropdownitems} href="#">Card Product Setup</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Card Product Rules</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Credit Scoring</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Credit Limit Profile</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Customer Group Fee</a></li>
+                                <li><a onClick={onclickHeader7} className={`${isOpen7 === true ? styles.dropdownitemsactive : styles.dropdownitems}`} href="#">Credit Scoring</a></li>
+                                <li><a onClick={onclickHeader8} className={`${isOpen8 === true ? styles.dropdownitemsactive : styles.dropdownitems}`} href="#">Credit Limit Profile</a></li>
                             </div>
                         </div>
                     </div>
 
 
-                    {/* <div className={styles.accordianThree} class="accordion-item">
-                        <h2 className={styles.accordianheader} class="accordion-header">
-                            <button onClick={toggleImage} class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <div className={styles.accordianThree} class="accordion-item">
+                        <h2 onClick={onclickHeader3} className={`${isOpen3 === true ? styles.accordianheaderactive : styles.accordianheader}`}>
+                            <button onClick={toggleImage3} class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 <Image className={styles.ddtimg11} src="/wallet2.svg" width={20} height={20} />
                                 Cards Management
-                                {toggled ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12} /> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12} />}
+                                {toggled3 ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12} /> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12} />}
                             </button>
                         </h2>
                         <div className={styles.accordianBody} id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className={styles.accordianitems} class="accordion-body">
-                                <li><a className={styles.dropdownitems} href="#">Card Product Setup</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Card Product Rules</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Credit Scoring</a></li>
+                                <li><a onClick={onclickHeader9} className={`${isOpen9 === true ? styles.dropdownitemsactive : styles.dropdownitems}`} href="#">Customer Group Fee</a></li>
+                                <li><a onClick={onclickHeader10} className={`${isOpen10 === true ? styles.dropdownitemsactive : styles.dropdownitems}`} href="#">Product Transactions</a></li>
+                                <li><a onClick={onclickHeader11} className={`${isOpen11 === true ? styles.dropdownitemsactive : styles.dropdownitems}`} href="#">Customer Group Fee</a></li>
+                                <li><a onClick={onclickHeader12} className={`${isOpen12 === true ? styles.dropdownitemsactive : styles.dropdownitems}`} href="#">Customer Group Fee</a></li>
+                                {/* <li><a className={styles.dropdownitems} href="#">Credit Scoring</a></li>
                                 <li><a className={styles.dropdownitems} href="#">Credit Limit Profile</a></li>
-                                <li><a className={styles.dropdownitems} href="#">Customer Group Fee</a></li>
+                                <li><a className={styles.dropdownitems} href="#">Customer Group Fee</a></li> */}
                             </div>
                         </div>
                     </div>
 
-                    <div className={styles.accordianFour} class="accordion-item">
-                        <h2 className={styles.accordianheader} class="accordion-header">
-                            <button onClick={toggleImage} class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    {/* <div className={styles.accordianFour} class="accordion-item">
+                        <h2 onClick={onclickHeader4} className={`${isOpen4 === true ? styles.accordianheaderactive : styles.accordianheader}`}>
+                            <button onClick={toggleImage4} class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                 <Image className={styles.ddtimg11} src="/pencil-square.svg" width={20} height={20} />
                                 Application Forms
-                                {toggled ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12} /> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12} />}
+                                {toggled4 ? <img src="/chevron-down.svg" alt="down" className={styles.ddtimg12} /> : <img src="/chevron-up.svg" alt="up" className={styles.ddtimg12} />}
                             </button>
                         </h2>
                         <div className={styles.accordianBody} id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -99,7 +196,6 @@ function Asidebar() {
                             </div>
                         </div>
                     </div> */}
-
 
                 </div>
 

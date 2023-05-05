@@ -97,3 +97,10 @@ a {
   display: inline-flex;
 }
 
+.accordianitems .dropdownitemsactive{
+  padding-left: 40px;
+  opacity: 1;
+  color: white;
+  /* text-decoration: underline; */
+  font-weight: bold;
+}
